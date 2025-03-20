@@ -3,7 +3,9 @@
 Created a different table for measures (Measure Table)
 1st Card -> 
 •	Total Gross Revenue = SUM('supermarket_sales'[Total]).
+
 •	A line chart of ‘Total Gross Revenue’ vs. ‘Date’ has drawn.
+
 •	To show sales growth or negative growth,
            Revenue Change %(Gross Revenue) = 
            VAR SelectedMonth = SELECTEDVALUE(supermarket_sales[Month]) 
@@ -31,6 +33,8 @@ Created a different table for measures (Measure Table)
     )
 RETURN
 FormattedResult
+
+
 •	To customize the font color of the above DAX ,
 
 Revenue Change Numeric(Gross Revenue)(for Formatting) = 
@@ -56,6 +60,8 @@ VAR PercentageChange = DIVIDE(CurrentMonthRevenue - PreviousMonthRevenue, Previo
 
 RETURN
 IF(NOT ISBLANK(PreviousMonthRevenue), PercentageChange, BLANK())
+
+
 
 2nd Card & 3rd Card ->
 Similarly two other cards, ‘Total Net Revenue’ & ‘Total Gross Income’ are created.
