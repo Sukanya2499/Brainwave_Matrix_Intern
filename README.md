@@ -65,6 +65,10 @@ IF(NOT ISBLANK(PreviousMonthRevenue), PercentageChange, BLANK())
 
 2nd Card & 3rd Card ->
 Similarly two other cards, ‘Total Net Revenue’ & ‘Total Gross Income’ are created.
+SUMX(supermarket_sales,supermarket_sales[Quantity]*supermarket_sales[Unit price])
+
+Total Gross Income = SUM(supermarket_sales[gross income])
+
 
 •	‘Gross Revenue’, ‘Net Revenue’, ‘Gross Income’ are shown based on ‘Product Line’ using a clusted bar chart.
 •	Customer type for overall sales is shown using a donut chart.
